@@ -9,7 +9,6 @@
   padding: 0 40px;
   height: 10vh;
   z-index: 4;
-  background-color: #fff;
 }
 
 .burger-btn {
@@ -71,4 +70,10 @@
   width: 100%;
   height: 2px;
   background-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    background-color: #fff;
+  }
 }

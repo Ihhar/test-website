@@ -38,5 +38,5 @@ module.exports = {
       },
     }
   ],
-  pathPrefix: "/Ihhar/test-website",
+  pathPrefix: "/test-website",
 }
