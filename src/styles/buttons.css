@@ -1,0 +1,29 @@
+.btn-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-left {
+  background: url('../icons/before-black.svg') no-repeat;
+}
+
+.btn-right {
+  background: url('../icons/next-black.svg') no-repeat;
+}
+
+.btn-sm {
+  position: relative;
+  background-position: center;
+  background-size: 30px 30px;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.btn-sm:first-of-type {
+  margin-right: 20px;
+}

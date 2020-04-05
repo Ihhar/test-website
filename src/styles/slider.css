@@ -1,0 +1,94 @@
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, .9);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.btn-container-mobile {
+  display: none;
+}
+
+.btn-prev-mobile,
+.btn-next-mobile {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center center;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.btn-prev-mobile {
+  background: url('../icons/before.svg') no-repeat;
+}
+
+.btn-next-mobile {
+  background: url('../icons/next.svg') no-repeat;
+}
+
+.btn {
+  position: absolute;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.close-btn {
+  top: 0;
+  right: 0;
+  margin: 0 20px;
+}
+
+.btn-prev,
+.btn-next {
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: cover;
+  background-position: center center;
+}
+
+.btn-prev {
+  background: url('../icons/before.svg') no-repeat;
+  left: 30px;
+}
+
+.btn-next {
+  background: url('../icons/next.svg') no-repeat;
+  right: 30px;
+}
+
+.slider-image {
+  max-width: 80vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+  }
+
+  .btn-prev,
+  .btn-next {
+    display: none;
+  }
+
+  .btn-container-mobile {
+    display: flex;
+    justify-content: flex-end;
+    width: 80vw;
+  }
+}

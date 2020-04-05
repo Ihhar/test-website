@@ -1,0 +1,108 @@
+.scroll-container {
+  display: table;
+  transform: translateX(0);
+  transition: transform .4s ease;
+  margin-top: 10vh;
+}
+
+.row {
+  display: flex;
+  height: 40vh;
+  padding: 0 7px;
+}
+
+.row:first-of-type {
+  margin-bottom: 7px;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-right: 7px;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.6);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.show-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -200px);
+  opacity: 0;
+  z-index: -1;
+  transition: transform .3s, opacity .3s;
+}
+
+.image-wrapper:hover .show-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url('../icons/search.svg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: transform .3s, opacity .3s;
+  z-index: 10;
+}
+
+.gatsby-image-wrapper {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform .3s;
+}
+
+.image-wrapper:hover .gatsby-image-wrapper {
+  transform: scale(1.2);
+  transition: transform .3s;
+}
+
+.gatsby-image-wrapper img {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .scroll-container {
+    display: block;
+    padding: 0 5px;
+    width: 100%;
+  }
+
+  .row {
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .row:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .image-wrapper {
+    width: 100% !important;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+}
